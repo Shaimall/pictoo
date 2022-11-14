@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../components/Nav";
-import { Card } from "../components/Card";
+import { Card, Card2 } from "../components/Card";
 
 export default function Home() {
   return (
@@ -83,8 +83,8 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <section className=" bg-slate-400">
-        <div className="grid grid-cols-2 container mx-auto pt-40">
+      <section className=" bg-slate-400 ">
+        <div className="grid grid-cols-2 container mx-auto pt-40 pb-24">
           <div className=" container px-36 py-16 mt-60">
             <h className=" text-2xl"> Work Process</h>
             <p className="text-base mt-5">
@@ -98,11 +98,23 @@ export default function Home() {
               purus arcu, varius eget velit non.
             </p>
           </div>
-          <div className="grid grid-cols-2 ">
+          <div className="grid grid-cols-2 mt-28 gap-9 rounded-lg ">
             {CARD.map((item, i) => (
               <Card {...item} key={i} />
             ))}
           </div>
+        </div>
+      </section>
+      <section>
+        <h className="w-screen flex justify-center mt-8 text-4xl">Portfolio</h>
+        <p className="w-screen flex justify-center mt-7">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration.
+        </p>
+        <div className="grid grid-cols-3">
+          {CARD2.map((item, i) => (
+            <Card2 {...item} key={i} />
+          ))}
         </div>
       </section>
     </div>
@@ -208,6 +220,190 @@ const CARD = [
 
     description:
       "Raw denim health goth artisan, kitsch literally shabby chic meh small batch Wes Anderson retro Neutra. Blog meggings semiotics, irony swag cred kale chips aesthetic",
+    href: "#",
+  },
+];
+
+const CARD2 = [
+  {
+    image: <img className="" src="img/card1.png" alt="" />,
+
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
+
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+  {
+    image: <img className="" src="img/card1.png" alt="" />,
+
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
+
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+  {
+    image: <img className="" src="img/card1.png" alt="" />,
+
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
+
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+  {
+    image: <img className="" src="img/card1.png" alt="" />,
+
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
+
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+  {
+    image: <img className="" src="img/card1.png" alt="" />,
+
+    title: "UI-UX DESIGN",
+
+    title2: "Product Admin Dashboard",
+
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+  {
+    image: <img className="" src="img/card1.png" alt="" />,
+
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
+
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
     href: "#",
   },
 ];
