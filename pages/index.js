@@ -1,16 +1,20 @@
 import React from "react";
 import Nav from "../components/Nav";
+import Scard from "../components/Scard";
+import Myproj from "../components/Myproj";
 import { Card, Card2 } from "../components/Card";
 
 export default function Home() {
   return (
     <div>
-      {/* <Nav /> */}
-      <header className="bg-gradient-to-r to-[#DA4DF1] from-white relative ">
+      <div className="container mx-auto hidden md:block">
+        <Nav />
+      </div>
+      <header className="bg-gradient-to-r to-[#8b51e2] from-white relative min-h-screen ">
         <section>
           <div className=" grid md:grid-cols-2 lg:px-20 md:px-10 gap-2  py-20">
             <div className="">
-              <h className="lg:text-5xl md:text-3xl leading-normal font-bold text-5xl ">
+              <h className="  lg:text-5xl md:text-3xl leading-normal font-bold text-5xl ">
                 Hello, I’m<br></br> Brooklyn Gilbert
               </h>
               <p className="md:text-base mt-8 container xl:pr-36 text-2xl">
@@ -19,7 +23,7 @@ export default function Home() {
                 applications through carefully crafted code and user-centric
                 design.
               </p>
-              <button className="bg-[#A53DFF]  mt-6 rounded-md px-4 py-2 text-xs text-white ">
+              <button className="bg-[#A53DFF]  mt-6 rounded-md px-6 py-3 text-sm text-white ">
                 {" "}
                 Say Hello!
               </button>
@@ -50,6 +54,41 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="  ">
+          <div className="md:w-[69%] md:h-[40%]  w-full bg-white md:mx-auto rounded-lg  ">
+            <div className="grid md:grid-cols-2 md:gap-4 md:container md:px-28 md:py-28 md:mx-auto">
+              <div className="static">
+                <div className="relative mx-auto">
+                  <div className="absolute lg:inset-x-0 md:inset-x-24 inset-x-20 md:-bottom-7 -bottom-5 flex justify-center ">
+                    <Scard />
+                  </div>
+                  <img
+                    className="rounded-md flex justify-center w-[100%] h-[100%]  "
+                    src="img/mans.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="mt-24 text-center md:text-left">
+                <h className="xl:text-4xl lg:3xl md:xl font-bold text-3xl">
+                  I am Professional User Experience Designer
+                </h>
+                <p className="lg:text-lg mt-2 text-lg">
+                  I design and develop services for customers specializing
+                  creating stylish, modern websites, web services and online
+                  stores. My passion is to design digital user experiences.
+                </p>
+                <p className="mt-2 text-lg">
+                  I design and develop services for customers specializing
+                  creating stylish, modern websites, web services.
+                </p>
+                <div className="mt-4 flex justify-center  md:justify-start">
+                  <Myproj />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </header>
       {/* <section className=" bg-slate-400 ">
         <div className="grid grid-cols-2 container mx-auto pt-40 pb-24">
@@ -72,7 +111,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section> 
       {/* <section>
         <h className="w-screen flex justify-center mt-8 text-4xl">Portfolio</h>
         <p className="w-screen flex justify-center mt-7">
