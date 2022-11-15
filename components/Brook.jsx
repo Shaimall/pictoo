@@ -6,7 +6,7 @@ const Brook = () => {
       <div className="bg-[#A53DFF] w-12 h-12 rounded-full text-center text-2xl  ">
         <p className="pt-1.5 text-white">B</p>
       </div>
-      <p className="text-2xl gap-2 pt-1">Brooklyn</p>
+      <p className="text-2xl gap-2 pt-1 font-bold mt-1">Brooklyn</p>
     </div>
   );
 };

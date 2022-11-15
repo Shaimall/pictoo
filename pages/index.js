@@ -7,11 +7,11 @@ import { Card, Card2 } from "../components/Card";
 export default function Home() {
   return (
     <div>
-      <div className="container mx-auto hidden md:block">
+      <div className="container mx-auto ">
         <Nav />
       </div>
       <header className="bg-gradient-to-r to-[#8b51e2] from-white relative min-h-screen ">
-        <section>
+        <section className="container mx-auto">
           <div className=" grid md:grid-cols-2 lg:px-20 md:px-10 gap-2  py-20">
             <div className="">
               <h className="  lg:text-5xl md:text-3xl leading-normal font-bold text-5xl ">
@@ -28,17 +28,20 @@ export default function Home() {
                 Say Hello!
               </button>
               <div className="grid grid-cols-3 gap-1 text-center py-4 lg:mt-48 md:mt-14 xl:mt-64">
-                <div className="bg-[#EDD8FF] py-4 rounded-md ">
-                  <h className="text-lg font-bold">15 Y.</h>
-                  <p className="text-xs"> Experience</p>
+                <div className="bg-[#EDD8FF] py-4 rounded-l-sm  ">
+                  <h className="text-3xl font-bold text-[#424E60]">15 Y.</h>
+                  <p className="text-base text-[#697484]"> Experience</p>
                 </div>
-                <div className="bg-[#EDD8FF] py-4 rounded-md  ">
-                  <h className="text-lg font-bold">250+</h>
-                  <p className="text-xs "> Projects Completed</p>
+                <div className="bg-[#EDD8FF] py-4   ">
+                  <h className="text-3xl font-bold text-[#424E60]">250+</h>
+                  <p className="text-base text-[#697484] ">
+                    {" "}
+                    Projects Completed
+                  </p>
                 </div>
-                <div className="bg-[#EDD8FF] py-4 rounded-md">
-                  <h className="text-lg font-bold">58</h>
-                  <p className="text-xs "> Happy Client</p>
+                <div className="bg-[#EDD8FF] py-4 rounded-r-sm">
+                  <h className="text-3xl font-bold text-[#424E60]">58</h>
+                  <p className="text-base text-[#697484] "> Happy Client</p>
                 </div>
               </div>
             </div>
@@ -47,29 +50,21 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
-          <div className="bg-white mx-auto w-12 ">
-            <div className="grid grid-cols-2">
-              <div></div>
-            </div>
-          </div>
-        </section>
-        <section className="  ">
-          <div className="md:w-[69%] md:h-[40%]  w-full bg-white md:mx-auto rounded-lg  ">
-            <div className="grid md:grid-cols-2 md:gap-4 md:container md:px-28 md:py-28 md:mx-auto">
-              <div className="static">
-                <div className="relative mx-auto">
+
+        <section className=" md:container md:mx-auto w-full ">
+          <div className=" max-w-7xl bg-white md:mx-auto rounded-lg md:px-10 lg:px-20 md:py-12 ">
+            <div className="grid md:grid-cols-2 md:gap-4  ">
+              <div className="flex justify-center items-center">
+                <div className="relative mx-auto place-content-center">
                   <div className="absolute lg:inset-x-0 md:inset-x-24 inset-x-20 md:-bottom-7 -bottom-5 flex justify-center ">
                     <Scard />
                   </div>
-                  <img
-                    className="rounded-md flex justify-center w-[100%] h-[100%]  "
-                    src="img/mans.png"
-                    alt=""
-                  />
+                  <div className="rounded-md">
+                    <img className="w-full" src="img/mans.png" alt="" />
+                  </div>
                 </div>
               </div>
-              <div className="mt-24 text-center md:text-left">
+              <div className="md:mt-24 mt-12 text-center md:text-left">
                 <h className="xl:text-4xl lg:3xl md:xl font-bold text-3xl">
                   I am Professional User Experience Designer
                 </h>
