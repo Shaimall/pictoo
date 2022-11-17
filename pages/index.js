@@ -6,6 +6,7 @@ import Research from "../components/Research";
 import { Card, Card2 } from "../components/Card";
 import Analyze from "../components/Analyze";
 import Portfolio from "../components/Portfolio";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -124,6 +125,24 @@ export default function Home() {
           <button className="bg-[#A53DFF] px-6 py-3 text-white font-bold flex mx-auto mt-12  rounded ">
             My Project
           </button>
+        </div>
+      </section>
+      <section className="bg-[#132238]">
+        <div className="container mx-auto px-20 py-20 ">
+          <h className="md:text-5xl text-3xl text-white font-bold flex justify-center text-center md:text-left">
+            Do you have Project Idia?<br></br> Let's discuss your project!
+          </h>
+          <p className="text-lg font-semibold flex justify-center text-center text-[#A5ACB5] mt-10">
+            There are many variations of passages of Lorem Ipsum available,
+            <br></br> but the majority have suffered alteration.
+          </p>
+          <div className="flex justify-center mt-6 ">
+            <button className="bg-[#A53DFF] font-semibolds text-white px-6 py-3 flex rounded">
+              {" "}
+              Lets's Work Together
+              <AiOutlineArrowRight className="mt-1 ml-3" />
+            </button>
+          </div>
         </div>
       </section>
       {/* <section className=" bg-slate-400 ">
