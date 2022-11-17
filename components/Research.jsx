@@ -5,7 +5,7 @@ import { BiPencil } from "react-icons/bi";
 const Research = () => {
   return (
     <div>
-      <div className="flex flex-col">
+      <div className="flex flex-col ">
         <div className="flex flex-col container p-9 bg-white rounded-xl">
           <div className="w-16 h-16 bg-[#EDD8FF] hover:bg-[#A53DFF] rounded-md ">
             <div className="flex justify-center items-center pt-4">

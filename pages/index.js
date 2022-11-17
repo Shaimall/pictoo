@@ -5,6 +5,7 @@ import Myproj from "../components/Myproj";
 import Research from "../components/Research";
 import { Card, Card2 } from "../components/Card";
 import Analyze from "../components/Analyze";
+import Portfolio from "../components/Portfolio";
 
 export default function Home() {
   return (
@@ -102,12 +103,27 @@ export default function Home() {
             </p>
           </div>
           <div className="col-span-1 hidden md:block"></div>
-          <div className="col-span-3 container px-4 ">
+          <div className="col-span-3 container px-4  ">
             <Research />
           </div>
-          <div className="col-span-3 mt-9 container px-4">
+          <div className="col-span-3 md:mt-9 container px-4">
             <Analyze />
           </div>
+        </div>
+      </section>
+      <section className="min-h-screen">
+        <h className="text-5xl font-bold pt-24 flex justify-center">
+          Portfolio
+        </h>
+        <p className=" text-lg text-[#87909D] mx-auto text-center md:w-1/3 mt-6">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration.{" "}
+        </p>
+        <div className="container  mx-auto mt-10 px-5 pb-10">
+          <Portfolio />
+          <button className="bg-[#A53DFF] px-6 py-3 text-white font-bold flex mx-auto mt-12  rounded ">
+            My Project
+          </button>
         </div>
       </section>
       {/* <section className=" bg-slate-400 ">
