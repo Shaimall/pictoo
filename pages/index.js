@@ -7,6 +7,7 @@ import { Card, Card2 } from "../components/Card";
 import Analyze from "../components/Analyze";
 import Portfolio from "../components/Portfolio";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Sec4 from "../components/Sec4";
 
 export default function Home() {
   return (
@@ -142,6 +143,21 @@ export default function Home() {
               Lets's Work Together
               <AiOutlineArrowRight className="mt-1 ml-3" />
             </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container mx-auto py-24">
+          <div className="flex flex-col items-center">
+            <h className="font-bold text-5xl text-[#132238]">Blog</h>
+            <p className="text-lg text-[#87909D] mt-5 text-center">
+              There are many variations of passages of Lorem Ipsum available,
+              <br></br>
+              but the majority have suffered alteration.
+            </p>
+          </div>
+          <div className="mt-20">
+            <Sec4 />
           </div>
         </div>
       </section>
