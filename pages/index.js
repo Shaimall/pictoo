@@ -8,6 +8,7 @@ import Analyze from "../components/Analyze";
 import Portfolio from "../components/Portfolio";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Sec4 from "../components/Sec4";
+import UE from "../components/UE";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <Nav />
       </div>
       <header className="bg-gradient-to-b to-[#C4F5E9] from-pink-300 relative min-h-screen ">
-        <section className="container mx-auto">
+        <section className="container mx-auto px-16 md:px-0">
           <div className=" grid md:grid-cols-2 lg:px-20 md:px-10 gap-2  py-20">
             <div className="">
               <h className="  lg:text-5xl md:text-3xl leading-normal font-bold text-5xl ">
@@ -92,7 +93,7 @@ export default function Home() {
       </header>
       <section className="bg-[#F0F1F3] overflow-hidden ">
         <div className="grid md:grid-cols-12 md:pt-52 md:pb-52 pt-4 gap-5 container mx-auto min-h-full px-5 md:px-none">
-          <div className="col-span-5 md:mt-48 ">
+          <div className="col-span-5 md:mt-48 text-center md:text-left ">
             <h className="text-5xl font-bold  "> Work Process</h>
             <p className="text-[#697484] mt-3 text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
@@ -105,7 +106,8 @@ export default function Home() {
             </p>
           </div>
           <div className="col-span-1 hidden md:block"></div>
-          <div className="col-span-3 container px-4  ">
+
+          <div className="col-span-3 container px-4 ">
             <Research />
           </div>
           <div className="col-span-3 md:mt-9 container px-4">
@@ -156,8 +158,33 @@ export default function Home() {
               but the majority have suffered alteration.
             </p>
           </div>
-          <div className="mt-20">
+          <div className="mt-10 px-10">
             <Sec4 />
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#F0F1F3] ">
+        <div className="container mx-auto py-24 px-14 ">
+          <div className="grid md:grid-cols-2">
+            <div className="mt-20">
+              <h className="text-[#333333] font-bold text-5xl"> What I do?</h>
+              <p className="text-lg text-[#87909D] mt-5 container md:pr-36 ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                purus arcu, varius eget velit non, laoreet imperdiet orci.
+                Mauris ultrices eget lorem ac vestibulum. Suspendis imperdiet,
+              </p>
+              <p className="text-[#87909D] text-lg mt-3 md:w-4/6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                purus arcu, varius eget velit non.
+              </p>
+              <button className="bg-[#A53DFF] px-6 py-3 rounded text-white font-bold mt-6">
+                {" "}
+                Say Hello!
+              </button>
+            </div>
+            <div className="mt-5 md:mt-0">
+              <UE />
+            </div>
           </div>
         </div>
       </section>
