@@ -2,7 +2,9 @@ import React from "react";
 import Nav from "../components/Nav";
 import Scard from "../components/Scard";
 import Myproj from "../components/Myproj";
+import Research from "../components/Research";
 import { Card, Card2 } from "../components/Card";
+import Analyze from "../components/Analyze";
 
 export default function Home() {
   return (
@@ -10,7 +12,7 @@ export default function Home() {
       <div className="container mx-auto ">
         <Nav />
       </div>
-      <header className="bg-gradient-to-r to-[#8b51e2] from-white relative min-h-screen ">
+      <header className="bg-gradient-to-b to-[#C4F5E9] from-pink-300 relative min-h-screen ">
         <section className="container mx-auto">
           <div className=" grid md:grid-cols-2 lg:px-20 md:px-10 gap-2  py-20">
             <div className="">
@@ -51,7 +53,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className=" md:container md:mx-auto w-full ">
+        <section className=" md:container md:mx-auto w-full md:absolute -bottom-12 inset-x-11 ">
           <div className=" max-w-7xl bg-white md:mx-auto rounded-lg md:px-10 lg:px-20 md:py-12 ">
             <div className="grid md:grid-cols-2 md:gap-4  ">
               <div className="flex justify-center items-center">
@@ -85,6 +87,29 @@ export default function Home() {
           </div>
         </section>
       </header>
+      <section className="bg-[#F0F1F3] overflow-hidden ">
+        <div className="grid md:grid-cols-12 md:pt-52 md:pb-52 pt-4 gap-5 container mx-auto min-h-full px-5 md:px-none">
+          <div className="col-span-5 md:mt-48 ">
+            <h className="text-5xl font-bold  "> Work Process</h>
+            <p className="text-[#697484] mt-3 text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris
+              ultrices eget lorem ac vestibulum. Suspendis imperdiet,
+            </p>
+            <p className="text-[#697484] mt-2 text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              purus arcu, varius eget velit non.
+            </p>
+          </div>
+          <div className="col-span-1 hidden md:block"></div>
+          <div className="col-span-3 container px-4 ">
+            <Research />
+          </div>
+          <div className="col-span-3 mt-9 container px-4">
+            <Analyze />
+          </div>
+        </div>
+      </section>
       {/* <section className=" bg-slate-400 ">
         <div className="grid grid-cols-2 container mx-auto pt-40 pb-24">
           <div className=" container px-36 py-16 mt-60">
