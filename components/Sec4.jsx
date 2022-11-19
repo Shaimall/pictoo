@@ -6,7 +6,7 @@ const Sec4 = () => {
       <div className="grid md:grid-cols-4 gap-6">
         <div className="rounded-lg border-2">
           <img
-            className="w-full overflow-hidden "
+            className="w-full overflow-hidden rounded-t-md "
             src="img/cards1.png"
             alt=""
           />
@@ -21,7 +21,7 @@ const Sec4 = () => {
         </div>
         <div className="rounded-lg border-2">
           <img
-            className="w-full overflow-hidden "
+            className="w-full overflow-hidden rounded-t-md "
             src="img/cards2.png"
             alt=""
           />
@@ -36,7 +36,7 @@ const Sec4 = () => {
         </div>
         <div className="rounded-lg border-2">
           <img
-            className="w-full overflow-hidden "
+            className="w-full overflow-hidden rounded-t-md "
             src="img/cards3.png"
             alt=""
           />
@@ -51,7 +51,7 @@ const Sec4 = () => {
         </div>
         <div className="rounded-lg border-2">
           <img
-            className="w-full overflow-hidden "
+            className="w-full overflow-hidden rounded-t-md "
             src="img/cards4.png"
             alt=""
           />

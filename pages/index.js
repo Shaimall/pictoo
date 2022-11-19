@@ -3,20 +3,26 @@ import Nav from "../components/Nav";
 import Scard from "../components/Scard";
 import Myproj from "../components/Myproj";
 import Research from "../components/Research";
-import { Card, Card2 } from "../components/Card";
+import { Card2 } from "../components/Card";
 import Analyze from "../components/Analyze";
 import Portfolio from "../components/Portfolio";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Sec4 from "../components/Sec4";
 import UE from "../components/UE";
+import { GoLocation } from "react-icons/go";
+import { Card } from "../components/Card";
+import { BsArrowRight } from "react-icons/bs";
+import Footer from "../components/Footer";
+import Mobilenav from "../components/Mobilenav";
 
 export default function Home() {
   return (
     <div>
       <div className="container mx-auto ">
         <Nav />
+        <Mobilenav />
       </div>
-      <header className="bg-gradient-to-b to-[#C4F5E9] from-pink-300 relative min-h-screen ">
+      <header className="bg-gradient-to-b to-[#C4F5E9] from-pink-300 relative min-h-[1500px] ">
         <section className="container mx-auto px-16 md:px-0">
           <div className=" grid md:grid-cols-2 lg:px-20 md:px-10 gap-2  py-20">
             <div className="">
@@ -57,7 +63,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className=" md:container md:mx-auto w-full md:absolute -bottom-12 inset-x-11 ">
+        <section className=" md:container md:mx-auto w-full md:absolute md:-bottom-12 md:inset-x-11 my-14 md:my-0">
           <div className=" max-w-7xl bg-white md:mx-auto rounded-lg md:px-10 lg:px-20 md:py-12 ">
             <div className="grid md:grid-cols-2 md:gap-4  ">
               <div className="flex justify-center items-center">
@@ -123,16 +129,20 @@ export default function Home() {
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration.{" "}
         </p>
-        <div className="container  mx-auto mt-10 px-5 pb-10">
-          <Portfolio />
-          <button className="bg-[#A53DFF] px-6 py-3 text-white font-bold flex mx-auto mt-12  rounded ">
+        <div className="container mx-auto ">
+          <div className="grid md:grid-cols-3 gap-6 container mt-16 mx-auto">
+            {CARD2.map((item, i) => (
+              <Card2 {...item} key={i} />
+            ))}
+          </div>
+          <button className="bg-[#A53DFF] px-6 py-3 text-white font-bold flex mx-auto mt-12 mb-20 rounded ">
             My Project
           </button>
         </div>
       </section>
       <section className="bg-[#132238]">
         <div className="container mx-auto px-20 py-20 ">
-          <h className="md:text-5xl text-3xl text-white font-bold flex justify-center text-center md:text-left">
+          <h className="md:text-5xl text-3xl text-white font-bold text-center flex justify-center   ">
             Do you have Project Idia?<br></br> Let's discuss your project!
           </h>
           <p className="text-lg font-semibold flex justify-center text-center text-[#A5ACB5] mt-10">
@@ -188,327 +198,335 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <section className=" bg-slate-400 ">
-        <div className="grid grid-cols-2 container mx-auto pt-40 pb-24">
-          <div className=" container px-36 py-16 mt-60">
-            <h className=" text-2xl"> Work Process</h>
-            <p className="text-base mt-5">
-              {" "}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris
-              ultrices eget lorem ac vestibulum. Suspendis imperdiet,
-            </p>
-            <p className="text-base mt-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              purus arcu, varius eget velit non.
-            </p>
+      <section>
+        <div className="container mx-auto text-center min-h-screen my-24">
+          <h className="text-5xl text-[#132238] font-bold">Happy Clients</h>
+          <p className="text-[#87909D] text-lg mt-6 ">
+            There are many variations of passages of Lorem Ipsum available,
+            <br></br> but the majority have suffered alteration.
+          </p>
+          <div className=" grid md:grid-cols-6 gap-6 flex justify-center">
+            <img className="" src="img/google.png" alt="" />
+            <img className="" src="img/dribbble.png" alt="" />
+            <img className="" src="img/linkedin.png" alt="" />
+            <img className="" src="img/amazon.png" alt="" />
+            <img className="" src="img/medium.png" alt="" />
+            <img className="" src="img/spotify.png" alt="" />
           </div>
-          <div className="grid grid-cols-2 mt-28 gap-9 rounded-lg ">
-            {CARD.map((item, i) => (
-              <Card {...item} key={i} />
-            ))}
+          <div className="mt-28">
+            <h className="text-5xl font-bold text-[#333333]  ">Testimonial</h>
+            <p className="text-lg text-[#87909D] mt-6">
+              There are many variations of passages of Lorem Ipsum available,
+              <br></br> but the majority have suffered alteration.
+            </p>
+            <p className="font-bold text-[#2B384C] mt-14">
+              “Nulla efficitur nisl sit amet velit malesuada dapibus. Duis
+              mollis felis turpis, nec semper odio<br></br> convallis at.
+              Curabitur imperdiet semper arcu, a finibus arcu suscipit in. Donec
+              quis placerat nibh.<br></br>
+              Maecenas est purus, eleifend ac cursus sed, tincidunt ut sapien.
+              <br></br>
+              Morbi ornare elit at libero suscipit porta.”
+            </p>
+            <p className="text-lg font-bold mt-6">Esther Howard</p>
+            <p className="text-base mt-2">Managing Director, ABC company</p>
+          </div>
+          <div className="container mx-auto  ">
+            <div className="grid md:grid-cols-2 gap-4 container p-20 rounded-2xl shadow-2xl mt-14   ">
+              <div>
+                <h className="text-4xl font-bold text-[#132238]">
+                  Let’s discuss your Project
+                </h>
+                <p className="text-lg text-[#87909D]">
+                  There are many variations of passages of Lorem Ipsu available.
+                  <br></br> but the majority have suffered alte.
+                </p>
+                <div className="mt-9 flex-col ">
+                  {CARD.map((item, i) => (
+                    <Card {...item} key={i} />
+                  ))}
+                </div>
+                <Scard />
+              </div>
+              <div>
+                <h className="text-[#87909D] text-lg">
+                  There are many variations of passages of Lorem Ipsu available,
+                  <br></br>
+                  but the majority have suffered alte.
+                </h>
+                <div className="flex flex-col gap-4 mt-8">
+                  <form className="flex text-[#A53DFF]">
+                    <input
+                      className="border-b-2 border-[#A53DFF] p-2 flex-1 text-[#A53DFF] placeholder-[#A53DFF]"
+                      id="Name"
+                      type="Name"
+                      placeholder="Name"
+                    />
+                  </form>
+                  <form className="flex text-[#A53DFF]">
+                    <input
+                      className="border-b-2 border-[#A53DFF] p-2 flex-1 text-[#A53DFF] placeholder-[#A53DFF]"
+                      id="Name"
+                      type="Name"
+                      placeholder="Email"
+                    />
+                  </form>
+                  <form className="flex text-[#A53DFF]">
+                    <input
+                      className="border-b-2 border-[#A53DFF] p-2 flex-1 text-[#A53DFF] placeholder-[#A53DFF]"
+                      id="Name"
+                      type="Name"
+                      placeholder="Location"
+                    />
+                  </form>
+                  <div className="grid md:grid-cols-2 gap-2">
+                    <form className="flex text-[#A53DFF] w-1/2">
+                      <input
+                        className="border-b-2 border-[#A53DFF] p-2 flex-1 text-[#A53DFF] placeholder-[#A53DFF]"
+                        id="Name"
+                        type="Name"
+                        placeholder="Budget"
+                      />
+                    </form>
+                    <form className="flex text-[#A53DFF]">
+                      <input
+                        className="border-b-2 border-[#A53DFF] p-2 flex-1 text-[#A53DFF] placeholder-[#A53DFF]"
+                        id="Name"
+                        type="Name"
+                        placeholder="Subject"
+                      />
+                    </form>
+                  </div>
+                  <form className="flex text-[#A53DFF]">
+                    <input
+                      className="border-b-2 border-[#A53DFF] p-2 flex-1 text-[#A53DFF] placeholder-[#A53DFF]"
+                      id="Name"
+                      type="Name"
+                      placeholder="Message"
+                    />
+                  </form>
+                </div>
+                <button className="px-6 py-3 bg-[#A53DFF] flex text-white rounded gap-2 mt-10">
+                  Submit <BsArrowRight className="mt-1" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </section> 
-      {/* <section>
-        <h className="w-screen flex justify-center mt-8 text-4xl">Portfolio</h>
-        <p className="w-screen flex justify-center mt-7">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration.
-        </p>
-        <div className="grid grid-cols-3">
-          {CARD2.map((item, i) => (
-            <Card2 {...item} key={i} />
-          ))}
+        <div className=" bg-[#2B384C] pt-40 pb-14  ">
+          <Footer />
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
 
 const CARD = [
   {
-    icon: (
-      <svg
-        className="w-16"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-6 h-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
-        />
-      </svg>
-    ),
+    icon: <GoLocation />,
 
-    title: "1.Research",
+    title: "Address:",
+    description: "New Mexico 31134",
 
-    description:
-      "Scenester PBR deep v jean shorts typewriter. Sustainable keytar Tumblr, authentic mustache locavore scenester gentrify meh banjo fanny pack health goth. Four dollar toast",
     href: "#",
   },
   {
-    icon: (
-      <svg
-        className="w-16"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-6 h-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
-        />
-      </svg>
-    ),
+    icon: <GoLocation />,
 
-    title: "2. Analyze",
+    title: "My Email:",
+    description: "mymail@mail.com",
 
-    description:
-      "Pickled 8-bit tousled health goth farm-to-table Pitchfork, lumbersexual church-key photo booth Blue Bottle. Aesthetic viral American Apparel, scenester distillery",
     href: "#",
   },
   {
-    icon: (
-      <svg
-        className="w-16"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-6 h-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
-        />
-      </svg>
-    ),
+    icon: <GoLocation />,
 
-    title: "2. Design",
+    title: "Call Me Now::",
+    description: "00-1234 00000",
 
-    description:
-      "Cliche Intelligentsia church-key, gluten-free drinking vinegar keffiyeh cornhole next level shabby chic plaid tattooed. Helvetica post-ironic raw denim tousled listicle.",
-    href: "#",
-  },
-  {
-    icon: (
-      <svg
-        className="w-16"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-6 h-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
-        />
-      </svg>
-    ),
-
-    title: "4.Launch",
-
-    description:
-      "Raw denim health goth artisan, kitsch literally shabby chic meh small batch Wes Anderson retro Neutra. Blog meggings semiotics, irony swag cred kale chips aesthetic",
     href: "#",
   },
 ];
 
-// const CARD2 = [
-//   {
-//     image: <img className="" src="img/card1.png" alt="" />,
+const CARD2 = [
+  {
+    image: <img className="w-full" src="img/card1.png" alt="" />,
 
-//     title: "UI-UX DESIGN",
-//     title2: "Product Admin Dashboard",
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
 
-//     description:
-//       "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
-//     button: (
-//       <button className="flex">
-//         {" "}
-//         Case Study
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           fill="none"
-//           viewBox="0 0 24 24"
-//           stroke-width="1.5"
-//           stroke="currentColor"
-//           class="w-6 h-6"
-//         >
-//           <path
-//             stroke-linecap="round"
-//             stroke-linejoin="round"
-//             d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-//           />
-//         </svg>
-//       </button>
-//     ),
-//     href: "#",
-//   },
-//   {
-//     image: <img className="" src="img/card1.png" alt="" />,
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+  {
+    image: <img className="w-full" src="img/card2.png" alt="" />,
 
-//     title: "UI-UX DESIGN",
-//     title2: "Product Admin Dashboard",
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
 
-//     description:
-//       "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
-//     button: (
-//       <button className="flex">
-//         {" "}
-//         Case Study
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           fill="none"
-//           viewBox="0 0 24 24"
-//           stroke-width="1.5"
-//           stroke="currentColor"
-//           class="w-6 h-6"
-//         >
-//           <path
-//             stroke-linecap="round"
-//             stroke-linejoin="round"
-//             d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-//           />
-//         </svg>
-//       </button>
-//     ),
-//     href: "#",
-//   },
-//   {
-//     image: <img className="" src="img/card1.png" alt="" />,
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+  {
+    image: <img className="w-full" src="img/card3.png" alt="" />,
 
-//     title: "UI-UX DESIGN",
-//     title2: "Product Admin Dashboard",
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
 
-//     description:
-//       "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
-//     button: (
-//       <button className="flex">
-//         {" "}
-//         Case Study
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           fill="none"
-//           viewBox="0 0 24 24"
-//           stroke-width="1.5"
-//           stroke="currentColor"
-//           class="w-6 h-6"
-//         >
-//           <path
-//             stroke-linecap="round"
-//             stroke-linejoin="round"
-//             d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-//           />
-//         </svg>
-//       </button>
-//     ),
-//     href: "#",
-//   },
-//   {
-//     image: <img className="" src="img/card1.png" alt="" />,
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+  {
+    image: <img className="w-full" src="img/card4.png" alt="" />,
 
-//     title: "UI-UX DESIGN",
-//     title2: "Product Admin Dashboard",
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
 
-//     description:
-//       "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
-//     button: (
-//       <button className="flex">
-//         {" "}
-//         Case Study
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           fill="none"
-//           viewBox="0 0 24 24"
-//           stroke-width="1.5"
-//           stroke="currentColor"
-//           class="w-6 h-6"
-//         >
-//           <path
-//             stroke-linecap="round"
-//             stroke-linejoin="round"
-//             d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-//           />
-//         </svg>
-//       </button>
-//     ),
-//     href: "#",
-//   },
-//   {
-//     image: <img className="" src="img/card1.png" alt="" />,
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+  {
+    image: <img className="w-full" src="img/avo.png" alt="" />,
 
-//     title: "UI-UX DESIGN",
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
 
-//     title2: "Product Admin Dashboard",
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+  {
+    image: <img className="w-full" src="img/card6.png" alt="" />,
 
-//     description:
-//       "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
-//     button: (
-//       <button className="flex">
-//         {" "}
-//         Case Study
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           fill="none"
-//           viewBox="0 0 24 24"
-//           stroke-width="1.5"
-//           stroke="currentColor"
-//           class="w-6 h-6"
-//         >
-//           <path
-//             stroke-linecap="round"
-//             stroke-linejoin="round"
-//             d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-//           />
-//         </svg>
-//       </button>
-//     ),
-//     href: "#",
-//   },
-//   {
-//     image: <img className="" src="img/card1.png" alt="" />,
+    title: "UI-UX DESIGN",
+    title2: "Product Admin Dashboard",
 
-//     title: "UI-UX DESIGN",
-//     title2: "Product Admin Dashboard",
-
-//     description:
-//       "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
-//     button: (
-//       <button className="flex">
-//         {" "}
-//         Case Study
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           fill="none"
-//           viewBox="0 0 24 24"
-//           stroke-width="1.5"
-//           stroke="currentColor"
-//           class="w-6 h-6"
-//         >
-//           <path
-//             stroke-linecap="round"
-//             stroke-linejoin="round"
-//             d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-//           />
-//         </svg>
-//       </button>
-//     ),
-//     href: "#",
-//   },
-// ];
+    description:
+      "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+    button: (
+      <button className="flex">
+        {" "}
+        Case Study
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+          />
+        </svg>
+      </button>
+    ),
+    href: "#",
+  },
+];

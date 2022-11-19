@@ -1,31 +1,39 @@
 import React from "react";
-export const Card = ({ title, description, icon }) => {
-  return (
-    <div className="md:flex md:text-left  bg-white rounded-2xl ">
-      <div className="flex-row">
-        <div className="">
-          {icon}
+import { AiOutlineArrowRight } from "react-icons/ai";
 
-          <p className="text-2xl text-black ">{title}</p>
+export const Card = ({ icon, title, description }) => {
+  return (
+    <div className="hover:shadow-lg container p-6 ">
+      <div className="flex gap-2 ">
+        <div className="text-3xl text-[#A53DFF] hover:text-white px-2 py-2 rounded-lg bg-[#EDD8FF80] hover:bg-[#A53DFF]">
+          {icon}
         </div>
-        <p className="text-base pt-4 text-black">{description}</p>
+        <div className="">
+          <p className="text-sm text-[#87909D] ">{title}</p>
+          <p className="text-[#132238]  ">{description}</p>
+        </div>
       </div>
     </div>
   );
 };
 
-export const Card2 = ({ image, title, title2, description, button }) => {
+export const Card2 = ({ image, title, title2, description }) => {
   return (
-    <div className="container px-20 mt-10">
-      <div className="relative">{image}</div>
-      <div className="flex-row container px-10 pt-5">
-        <h className="text-xs"> {title}</h>
-        <br></br>
-        <h className="text-lg">{title2}</h>
-        <p className="text-xs mt-2">{description}</p>
-        <button className="border-2 border-[#A53DFF] mt-5 px-5 mb-4">
-          {button}
-        </button>
+    <div className=" ">
+      <div className="container  ">
+        <div className="">{image}</div>
+        <div className="container border-t-0 border-2 px-10 py-10 ">
+          <p className="text-xs text-[#87909D] ">{title}</p>
+          <p className="text-lg font-bold text-[#132238] mt-1">{title2}</p>
+          <p className="text-sm text-[#556070] mt-3 ">{description}</p>
+
+          <div>
+            <button className="flex flex-row border-2 py-2 px-6 mt-5 rounded  justify-center border-[#A53DFF] text-[#A53DFF] font-bold text-base">
+              Case Study
+              <AiOutlineArrowRight className="mt-1 ml-4" />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
